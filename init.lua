@@ -650,6 +650,19 @@ require('lazy').setup({
           --     require('luasnip.loaders.from_vscode').lazy_load()
           --   end,
           -- },
+          --
+          {
+            'honza/vim-snippets',
+            config = function()
+              require('luasnip.loaders.from_snipmate').lazy_load()
+            end,
+          },
+          {
+            'mlaursen/vim-react-snippets',
+            config = function()
+              require('luasnip.loaders.from_snipmate').lazy_load()
+            end,
+          },
         },
       },
       'saadparwaiz1/cmp_luasnip',
