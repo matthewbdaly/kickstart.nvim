@@ -548,7 +548,7 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`tsserver`) will work just fine
-        -- tsserver = {},
+        tsserver = {},
         --
 
         lua_ls = {
@@ -570,6 +570,11 @@ require('lazy').setup({
             on_attach = on_attach,
           },
         },
+        intelephense = {},
+        psalm = {},
+        antlersls = {},
+        tailwindcss = {},
+        eslint = {},
       }
 
       -- Ensure the servers and tools above are installed
