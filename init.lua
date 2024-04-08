@@ -595,6 +595,7 @@ require('lazy').setup({
         antlersls = {},
         tailwindcss = {},
         eslint = {},
+        markdownlint = {},
       }
 
       -- Ensure the servers and tools above are installed
