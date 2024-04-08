@@ -320,6 +320,9 @@ require('lazy').setup({
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+
+      -- Git grep
+      { 'davvid/telescope-git-grep.nvim' },
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -354,6 +357,9 @@ require('lazy').setup({
         -- },
         -- pickers = {}
         extensions = {
+          ['git_grep'] = {
+            require('telescope').load_extension 'git_grep',
+          },
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
           },
@@ -776,8 +782,8 @@ require('lazy').setup({
           --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
         },
         sources = {
-          -- { name = 'copilot' },
-          { name = 'codeium' },
+          { name = 'copilot' },
+          -- { name = 'codeium' },
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
