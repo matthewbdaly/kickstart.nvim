@@ -320,6 +320,9 @@ require('lazy').setup({
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+
+      -- Git grep
+      { 'davvid/telescope-git-grep.nvim' },
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -354,6 +357,9 @@ require('lazy').setup({
         -- },
         -- pickers = {}
         extensions = {
+          ['git_grep'] = {
+            require('telescope').load_extension 'git_grep',
+          },
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
           },
@@ -595,6 +601,7 @@ require('lazy').setup({
         antlersls = {},
         tailwindcss = {},
         eslint = {},
+        markdownlint = {},
       }
 
       -- Ensure the servers and tools above are installed
@@ -775,8 +782,8 @@ require('lazy').setup({
           --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
         },
         sources = {
-          -- { name = 'copilot' },
-          { name = 'codeium' },
+          { name = 'copilot' },
+          -- { name = 'codeium' },
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
@@ -847,7 +854,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'typescript', 'tsx', 'php' },
+      ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'typescript', 'tsx', 'php', 'css' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
