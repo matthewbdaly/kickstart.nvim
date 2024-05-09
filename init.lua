@@ -816,6 +816,7 @@ require('lazy').setup({
         },
         sources = {
           -- { name = 'copilot' },
+          { name = 'buffer' },
           { name = 'codeium' },
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
