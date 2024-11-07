@@ -395,6 +395,9 @@ require('lazy').setup({
           ['git_grep'] = {
             require('telescope').load_extension 'git_grep',
           },
+          ['projects'] = {
+            require('telescope').load_extension 'projects',
+          },
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
           },
