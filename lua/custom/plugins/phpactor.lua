@@ -17,7 +17,7 @@ return {
         'phtml',
       },
       install = {
-        php_bin = '~/.phpbrew/php/php-8.3.2/bin/php',
+        php_bin = '~/.phpbrew/php/php-8.3.13/bin/php',
         bin = '/usr/local/bin/phpactor',
       },
     }

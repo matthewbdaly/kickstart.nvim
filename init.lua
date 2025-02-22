@@ -929,7 +929,7 @@ require('lazy').setup({
         },
         sources = {
           { name = 'buffer' },
-          { name = 'copilot' },
+          { name = 'codecompanion' },
           {
             name = 'lazydev',
             -- set group index to 0 to skip loading LuaLS completions as lazydev recommends it
@@ -1036,6 +1036,7 @@ require('lazy').setup({
         'tsx',
         'vim',
         'vimdoc',
+        'yaml',
       },
       -- Autoinstall languages that are not installed
       auto_install = true,
