@@ -944,9 +944,20 @@ require('lazy').setup({
       },
 
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer', 'copilot', 'lazydev' },
+        default = { 'lsp', 'path', 'snippets', 'buffer', 'copilot', 'git', 'lazydev' },
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
+          git = {
+            module = 'blink-cmp-git',
+            name = 'Git',
+            opts = {
+              name = 'Git',
+              -- only enable this source when filetype is gitcommit, markdown, or 'octo'
+              enabled = function()
+                return vim.tbl_contains({ 'octo', 'gitcommit', 'markdown' }, vim.bo.filetype)
+              end,
+            },
+          },
           copilot = {
             name = 'copilot',
             module = 'blink-cmp-copilot',
