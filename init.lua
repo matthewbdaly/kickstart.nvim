@@ -383,6 +383,9 @@ require('lazy').setup({
 
       -- Git grep
       { 'davvid/telescope-git-grep.nvim' },
+
+      -- Undo tree
+      { 'debugloop/telescope-undo.nvim' },
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -425,6 +428,9 @@ require('lazy').setup({
           },
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
+          },
+          ['undo'] = {
+            require('telescope').load_extension 'undo',
           },
         },
       }
