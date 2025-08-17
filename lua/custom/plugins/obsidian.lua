@@ -22,12 +22,8 @@ return {
       legacy_commands = false,
       workspaces = {
         {
-          name = 'DreamingSpires',
-          path = '~/Documents/ObsidianVaults/Dreaming Spires Bible/',
-        },
-        {
-          name = 'Metacivilization',
-          path = '~/Documents/ObsidianVaults/Metacivilization/',
+          name = 'Notes',
+          path = '~/Dropbox/Notes/',
         },
       },
 
