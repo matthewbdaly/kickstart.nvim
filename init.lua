@@ -714,11 +714,16 @@ require('lazy').setup({
           },
         },
         phpactor = {
+          cmd = { '/Users/matthewdaly/.phpbrew/php/php-8.4.7/bin/php', '/Users/matthewdaly/.local/share/nvim/mason/packages/phpactor/phpactor' },
           settings = {
             on_attach = on_attach,
           },
         },
         intelephense = {
+          cmd = { '/Users/matthewdaly/.local/share/nvim/mason/bin/intelephense', '--stdio' },
+          init_options = {
+            phpBinary = '/Users/matthewdaly/.phpbrew/php/php-8.4.7/bin/php',
+          },
           files = {
             maxSize = 5000000,
             exclude = {
